@@ -13,12 +13,11 @@
       v-model="radii"
       @change="radiusChange"
     />
- 
 
     <div v-if="items.length > 0">
       <h4 class="text-secondary mb-3">Found following things around you</h4>
       <div v-for="item in items" :key="item.id">
-        <ListingCard :loc="item" :showDeleteBtn="false" :showActionBtn="true"/>
+        <ListingCard :loc="item" :showDeleteBtn="false" :showActionBtn="true" />
       </div>
     </div>
 
@@ -88,7 +87,7 @@ export default {
       this.items = listings;
       this.items.forEach((item) => {
         item.coords = JSON.parse(item.coords);
-      })
+      });
     },
   },
 };

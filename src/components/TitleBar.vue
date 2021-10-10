@@ -18,11 +18,11 @@ export default {
 .title {
   background-color: rgb(36, 180, 126);
   color: #eafbf5;
-  font-weight: bold;
   padding: 0.8rem 0.6rem;
 }
 
 h1 {
   font-size: 2rem;
+  font-weight: bold;
 }
 </style>

@@ -3,7 +3,7 @@
     <h3 class="text-dark mb-3">Your Listings</h3>
     <div v-if="items.length > 0">
       <div v-for="item in items" :key="item.id">
-        <ListingCard :loc="item" :showDeleteBtn="true" :showActionBtn="false"/>
+        <ListingCard :loc="item" :showDeleteBtn="true" :showActionBtn="false" />
       </div>
     </div>
 
@@ -25,8 +25,7 @@ export default {
   components: {
     ListingCard,
   },
-   created() {
-
+  created() {
     this.getUserListings(store.user.id);
   },
   data() {
@@ -40,17 +39,16 @@ export default {
 
   methods: {
     async getUserListings(userId) {
-      
       const { data: listings, error } = await supabase
         .from("all_locations")
         .select()
-        .eq('added_by',userId);
+        .eq("added_by", userId);
 
       if (error) {
         console.log("error", error);
         return;
       }
-  console.log(listings);
+      console.log(listings);
       // handle for when no todos are returned
       if (listings === null) {
         listings.value = [];

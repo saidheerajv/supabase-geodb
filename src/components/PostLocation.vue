@@ -1,10 +1,10 @@
 <template>
-<p class="alert alert-success" v-if="successAlert">
-  Added Listing successfully !
-</p>
-<p class="alert alert-warning" v-if="errorAlert">
-  Error Adding Listing ! Please try again. 
-</p>
+  <p class="alert alert-success" v-if="successAlert">
+    Added Listing successfully !
+  </p>
+  <p class="alert alert-warning" v-if="errorAlert">
+    Error Adding Listing ! Please try again.
+  </p>
   <div class="">
     <h3 class="text-dark mb-3">Post Listing</h3>
 
@@ -43,14 +43,12 @@ export default {
       name: "",
       loc_string: "",
       description: "",
-      successAlert : false, 
-      errorAlert : false
+      successAlert: false,
+      errorAlert: false,
     };
   },
   methods: {
-    
     async postListing() {
-
       let coords = this.getLatLong(this.loc_string);
       let d = new Date();
 
@@ -60,9 +58,9 @@ export default {
         description: this.description,
         tags: "xyz abc",
         coords: JSON.stringify(coords),
-        created_at : d,
-        updated_at : d,
-        added_by : store.user.id
+        created_at: d,
+        updated_at: d,
+        added_by: store.user.id,
       };
 
       // console.log(data);
@@ -74,16 +72,14 @@ export default {
         .single();
 
       // console.log(data, error);
-      if(error) {
+      if (error) {
         this.errorAlert = true;
       } else {
         this.successAlert = true;
       }
-
     },
 
     getLatLong(str) {
-      
       var patt1 = /[+-]?\d+(\.\d+)?/g;
       var result = str.match(patt1);
       result = result.filter((item) => {
@@ -100,7 +96,6 @@ export default {
 <style scoped>
 .action-btn {
   background-color: rgb(36, 180, 126);
-  color : #fff;
+  color: #fff;
 }
-
 </style>

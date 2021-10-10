@@ -19,7 +19,7 @@
           target="_blank"
           class="btn directions-btn text-white mx-2"
         >
-          Get Directions
+          Open in maps
         </a>
 
         <button
