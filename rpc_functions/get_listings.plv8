@@ -1,0 +1,9 @@
+create or replace function get_listings(radius int, point text) 
+returns setof all_locations as $$
+
+    var json_result = plv8.execute(
+    "SELECT * FROM all_locations WHERE ST_DWithin(location, $1::geometry, $2)", [point, radius]
+    );
+
+    return json_result;
+$$ language plv8;
