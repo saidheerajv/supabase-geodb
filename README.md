@@ -2,9 +2,6 @@
 
 ###  demo - https://saidheerajv.github.io/supabase-geodb/
 
-    Github - https://github.com/saidheerajv
-    Twitter - https://twitter.com/sai_dheerajv
-
 ### Supabase feature used 
    #### Database 
    - To store listings with location using PostgreSQL extension POSTgis
@@ -27,6 +24,34 @@
 
 ```
 Success. No rows returned
+```
+
+## Creating table
+
+```
+CREATE TABLE table_name (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(64),
+    location GEOGRAPHY(POINT,4326),
+    coords varchar(64),
+    created_at date,
+    updated_at date,
+  ..........
+  );
+```
+
+## Geo Query with plv8
+
+```
+create or replace function get_listings(radius int, point text) 
+returns setof all_locations as $$
+
+    var json_result = plv8.execute(
+    "SELECT * FROM all_locations WHERE ST_DWithin(location, $1::geometry, $2)", [point, radius]
+    );
+
+    return json_result;
+$$ language plv8;
 ```
 
 ## Project setup
