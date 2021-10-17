@@ -1,9 +1,7 @@
 # Supabase GeoDB
 
-### Link to hosted demo - https://saidheerajv.github.io/supabase-geodb/
+###  demo - https://saidheerajv.github.io/supabase-geodb/
 
-### Team members
-  Sai Dheeraj Vosawar 
     Github - https://github.com/saidheerajv
     Twitter - https://twitter.com/sai_dheerajv
 
