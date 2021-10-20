@@ -2,14 +2,6 @@
 
 ###  demo - https://saidheerajv.github.io/supabase-geodb/
 
-### Supabase feature used 
-   #### Database 
-   - To store listings with location using PostgreSQL extension POSTgis
-   #### RPC functions 
-   - Used RPC functions to fetch the records within "x" Kms radius of a point
-   #### Auth 
-   - Used magic link authentication to verify user who add listings.
-
 ## Descripion
 - Supabase GeoDB is uses PostgreSQL's PostGIS and plv8 extensions in Supabase to store/fetch records. 
 - Currently it supports querying for records within given radius of a point, features can be further extended (Reference https://postgis.net/docs/using_postgis_dbmanagement.html)
