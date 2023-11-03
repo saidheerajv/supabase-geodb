@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
     "@supabase/supabase-js": "^1.24.0",
     "bootstrap": "^5.1.1",
     "core-js": "^3.6.5",

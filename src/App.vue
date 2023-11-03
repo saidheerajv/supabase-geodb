@@ -11,21 +11,21 @@
 
   <p class="text-center border-bottom mt-2">
       <button
-        class="btn btn-secondary m-2 float-right"
+        class="btn btn-primary m-2 float-right"
         v-if="!store.user && !showLogin"
         @click="showLoginFunc"
       >
         Login to Add/Manage listing
       </button>
       <button
-        class="btn btn-danger m-2 float-right"
+        class="btn btn-outline-danger m-2 float-right"
         v-if="store.user"
         @click="signOut"
       >
         Sign out
       </button>
             <button
-        class="btn btn-secondary m-2 float-right"
+        class="btn btn-primary m-2 float-right"
         v-if="showLogin"
         @click="showLogin = !showLogin"
       >
