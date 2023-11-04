@@ -1,7 +1,5 @@
 # Supabase GeoDB
 
-###  demo - https://saidheerajv.github.io/supabase-geodb/
-
 ## Descripion
 - Supabase GeoDB is uses PostgreSQL's PostGIS and plv8 extensions in Supabase to store/fetch records. 
 - Currently it supports querying for records within given radius of a point, features can be further extended (Reference https://postgis.net/docs/using_postgis_dbmanagement.html)
